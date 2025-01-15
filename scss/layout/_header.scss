@@ -1,0 +1,231 @@
+@use "../abstracts";
+
+.header {
+    padding-top: 30px;
+    min-height : 100vh;
+    background : var(--header-bg-color);
+
+    &__inner {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+    }
+}
+
+
+.navbar {
+
+    @include abstracts.screen(sm) {
+        display: none;
+
+    }
+
+    &__list {
+        display    : flex;
+        align-items: center;
+    }
+
+    &-item {
+        position: relative;
+
+        &--active::before {
+            content  : '';
+            position : absolute;
+            top      : 50%;
+            transform: translateY(-50%);
+            left     : -12px;
+
+            display: inline-block;
+            width  : 6px;
+            height : 6px;
+
+            border-radius: 50%;
+            background   : var(--navbar-item-before);
+
+        }
+    }
+
+
+
+    &-item:hover &__link {
+        color      : var(--header-navbar-link-hover);
+        font-size  : 1.6rem;
+        font-weight: 400;
+        line-height: 1.75;
+    }
+
+    &__link {
+        padding: 6px 21px;
+
+        color      : var(--header-navbar-link);
+        font-size  : 1.6rem;
+        font-weight: 300;
+        line-height: 1.75;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+
+
+
+}
+
+.action {
+    display    : flex;
+    align-items: center;
+    column-gap : 28px;
+
+    &__login {
+        color      : var(--action-login);
+        font-size  : 1.6rem;
+        font-weight: 300;
+        line-height: 1.75;
+    }
+
+    &__cta {
+        --height : 44px;
+        min-width: 104px;
+        font-size: 1.6rem;
+    }
+}
+
+// Hero
+.hero {
+    padding: 76px 0 110px;
+
+    &__inner {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+
+        @include abstracts.screen(sm) {
+            justify-content: center;
+
+        }
+    }
+
+    &__content {
+        width: 44%;
+
+        @include abstracts.screen(sm) {
+            width          : 80%;
+            text-align     : center;
+            justify-content: center;
+
+
+
+        }
+    }
+
+    &__heading {
+        color         : var(--hero-heading);
+        font-size     : 7rem;
+        font-weight   : 600;
+        line-height   : 1.14;
+        letter-spacing: -1.4px;
+        width         : 517px;
+
+        @include abstracts.screen(lg) {
+            font-size: 4rem;
+
+        }
+
+        @include abstracts.screen(sm) {
+            font-size    : 3rem;
+            // text-align: center;
+        }
+    }
+
+    &__desc {
+        color      : var(--hero-desc);
+        font-size  : 1.8rem;
+        font-weight: 300;
+        line-height: 1.67;
+
+        margin-top: 22px;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.6rem;
+
+        }
+
+        @include abstracts.screen(sm) {
+            font-size    : 1.4rem;
+            // text-align: center;
+
+        }
+    }
+
+    &__row {
+        display    : flex;
+        align-items: center;
+        column-gap : 38px;
+        margin-top : 38px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items   : flex-start;
+
+        }
+
+        @include abstracts.screen(sm) {
+            align-items: center;
+        }
+
+
+    }
+
+    &__tel {
+        color      : var(--hero-tel);
+        font-size  : 1.8rem;
+        font-weight: 400;
+        line-height: 1.67;
+
+        @include abstracts.screen(lg) {
+            margin-top: 20px;
+
+        }
+    }
+
+
+
+    &__images {
+        display    : flex;
+        align-items: center;
+
+        @include abstracts.screen(sm) {
+            display: none;
+
+        }
+    }
+
+    &__img {
+        width        : 330px;
+        height       : 540px;
+        object-fit   : cover;
+        border-radius: 6px;
+
+        @include abstracts.screen(lg) {
+            width : 330px;
+            height: 540px;
+
+        }
+
+        &:first-child {
+            position    : relative;
+            margin-right: -6px;
+
+        }
+
+        &:last-child {
+            width : 210px;
+            height: 410px;
+
+            @include abstracts.screen(lg) {
+                display: none;
+
+            }
+        }
+    }
+}

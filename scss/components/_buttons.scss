@@ -1,0 +1,26 @@
+.btn {
+    --height       : 60px;
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: center;
+
+    min-width  : 205px;
+    height     : var(--height);
+    flex-shrink: 0;
+    line-height: var(--height);
+    padding    : 0 20px;
+
+    color      : var(--btn-color);
+    text-align : center;
+    font-size  : 1.8rem;
+    font-weight: 400;
+
+    border-radius: 999px;
+    background   : var(--btn-bg-color);
+
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
