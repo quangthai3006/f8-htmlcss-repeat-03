@@ -1,0 +1,19 @@
+@use "../abstracts";
+
+// Section Header
+
+.section-heading {
+    color         : var(--section-heading);
+    font-size     : 5rem;
+    font-weight   : 600;
+    line-height   : 1.2;
+    letter-spacing: -1px;
+}
+
+.section-desc {
+    color      : var(--section-desc);
+    font-size  : 1.8rem;
+    font-weight: 300;
+    line-height: 1.67;
+    margin-top: 18px; 
+}
