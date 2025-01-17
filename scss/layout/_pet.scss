@@ -1,0 +1,185 @@
+.pet {
+    padding      : 200px 0;
+    // background: #FFFAF5;
+
+    &__inner {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+    }
+
+    // &__media {
+    //     position      : relative;
+    //     display       : flex;
+    //     align-items   : flex-end;
+    //     padding-bottom: 94px;
+    // }
+
+    &__images {
+        position      : relative;
+        display       : flex;
+        align-items   : flex-end;
+        padding-bottom: 94px;
+    }
+
+    &__image {
+        position       : relative;
+        display        : flex;
+        align-items    : flex-end;
+        justify-content: center;
+        width          : 388px;
+        height         : 488px;
+        border         : 3px solid #fff;
+
+        border-radius: 16px;
+        background   : #FE997B;
+
+        &-small {
+            width        : 186px;
+            height       : 244px;
+            border       : 2px solid #fde0e2;
+            margin-left  : -30px;
+            margin-bottom: -60px;
+            background   : #FAA7AD;
+        }
+    }
+
+    &__img {
+        width     : 100%;
+        object-fit: contain;
+
+        border-radius: 16px;
+    }
+
+    &__decor {
+        position: absolute;
+
+        &-left {
+            left   : -58px;
+            bottom : 10px;
+            z-index: -1;
+        }
+
+        &-right {
+            top    : 17px;
+            right  : -40px;
+            z-index: -1;
+        }
+    }
+
+    &__list {
+        position     : absolute;
+        width        : 250px;
+        height       : 156px;
+        border-radius: 10px;
+        background   : #FFF;
+        box-shadow   : -17px 14px 68px -4px rgba(207, 174, 132, 0.25);
+        padding      : 18px 14px;
+        bottom       : 0;
+        left         : 129px;
+    }
+
+    &__separate {
+        margin    : 19px 0;
+        height    : 2px;
+        background: #F2F2F2;
+    }
+
+    &-item {
+        display   : flex;
+        column-gap: 10px;
+
+        &__icon {
+            display    : flex;
+            width      : 40px;
+            height     : 40px;
+            flex-shrink: 0;
+
+            border-radius: 10px;
+            background   : #FEC23F;
+
+            &-bottom {
+                background: #C6E2FA;
+            }
+        }
+
+        &__icon-img {
+            width        : 100%;
+            border-radius: 10px;
+            object-fit   : cover;
+        }
+
+        &__title {
+            color        : #181E52;
+            font-size    : 1.4rem;
+            font-weight  : 600;
+            line-height  : 1;
+            margin-bottom: 7px;
+        }
+
+        &__skeleton {
+            width        : 118px;
+            height       : 4px;
+            border-radius: 99px;
+            opacity      : 0.08;
+            background   : #000958;
+
+            &-small {
+                margin-top: 6px;
+                width     : 39px;
+            }
+        }
+    }
+
+    &__content {}
+
+    &__heading {
+        color      : #000958;
+        font-size  : 6.6rem;
+        font-weight: 800;
+        line-height: 1.15;
+        width      : 466px;
+    }
+
+    &__desc {
+        margin-top : 24px;
+        color      : #656689;
+        font-size  : 1.6rem;
+        font-weight: 400;
+        line-height: 1.87;
+        width      : 391px;
+    }
+
+    &__row {
+        display    : flex;
+        align-items: center;
+        column-gap : 24px;
+        margin-top : 38px;
+    }
+
+    &__cta {
+        color     : #fff;
+        background: #FF5B2E;
+        box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+    }
+
+    &__icon-wrap {
+        display        : inline-flex;
+        align-items    : center;
+        justify-content: center;
+        width          : 20px;
+        height         : 20px;
+        margin-left    : 10px;
+        border-radius  : 50%;
+        color          : #FD5056;
+        background     : #fff;
+    }
+
+    &__sub-cta {
+        color          : #000958;
+        font-size      : 1.6rem;
+        font-weight    : 500;
+        line-height    : 1;
+        text-decoration: underline;
+    }
+}
